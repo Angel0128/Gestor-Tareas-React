@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+}
+
+.card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.stats {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  /*color: #333;*/
+  font-size: 1.1em;
+}
+
+.pending {
+  color: #ff0800;
+}
+
+.completed {
+  color: #00b000;
+}
+
+.progressBarContainer {
+  margin-top: 20px;
+  background: #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progressBar {
+  height: 100%;
+  text-align: center;
+  color: white;
+  font-size: 0.9em;
+  font-weight: bold;
+  transition: width 0.4s ease, background-color 0.4s ease;
+}
