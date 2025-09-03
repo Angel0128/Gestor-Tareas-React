@@ -33,7 +33,7 @@ function TaskForm({ addTask }) {
         className={styles.input}
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Escribe una nueva tarea (máx 80 chars)"
+        placeholder="Escribe una nueva tarea (máx 80 caracteres)"
       />
       <select
         className={styles.select}

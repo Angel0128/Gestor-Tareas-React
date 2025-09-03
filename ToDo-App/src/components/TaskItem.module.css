@@ -1,116 +1,134 @@
-/*.item {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  justify-content: space-between;
-  background: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-} */
+/*.item { 
+  display: flex; 
+  gap: 12px; 
+  align-items: flex-start; 
+  justify-content: space-between; 
+  background: #fff; 
+  padding: 10px; 
+  border-radius: 8px; 
+  margin-bottom: 10px; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06); } */ 
+  
+  /* contenedor izquierdo: permite encoger a sus hijos */ 
+.left { 
+  display: flex; 
+  flex: 1; 
+  min-width: 0; 
+} 
+    
+.content { 
+  display: flex; 
+  flex-direction: column; 
+  min-width: 0; 
+} 
+    
+/* texto: permite que haga wrap sin romper el layout */ 
+.text { 
+  font-weight: 600; 
+  color: #f1f5f9; 
+  word-break: break-word; 
+  overflow-wrap: anywhere; 
+  white-space: normal; 
+} 
+    
+/* categoría debajo */ 
+.category { 
+  margin-top: 6px; 
+  color: #f1f5f9; 
+  font-size: 0.9rem; 
+} 
+    
+/* area de edición: inputs que se encogen */ 
+.editing { 
+  display: flex; 
+  gap: 8px; 
+  flex: 1; 
+  min-width: 0; 
+} 
+    
+.editInput { 
+  flex: 1; 
+  min-width: 0; /* <- permite que el input se reduzca en flex */ 
+  padding: 6px; 
+  border-radius: 6px; 
+  border: 1px solid #ccc; 
+} 
 
-/* contenedor izquierdo: permite encoger a sus hijos */
-.left {
-  display: flex;
-  flex: 1;
-  min-width: 0; /* <- FUNDAMENTAL para evitar overflow en flex */
+.editSelect { 
+  padding: 6px; 
+  border-radius: 6px; 
+  border: 1px solid #ccc; 
+} 
+
+/* acciones a la derecha */ 
+  .actions { 
+    display: flex; 
+    gap: 8px; 
+    align-items: center; 
+    margin-left: 8px; 
+  } 
+
+.editBtn, .deleteBtn, .saveBtn, .cancelBtn { 
+    border: none; 
+    cursor: pointer; 
+    padding: 6px 8px; 
+    border-radius: 6px; 
+} 
+
+.editBtn { 
+  background: #f59e0b; 
+  color: white; 
+} 
+    
+.deleteBtn { 
+  background: #ef4444; 
+  color: white; 
+} 
+
+.saveBtn { 
+  background: #10b981; 
+  color: white; 
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  min-width: 0; /* <- también importante */
-}
-
-/* texto: permite que haga wrap sin romper el layout */
-.text {
-  font-weight: 600;
-  color: #222;
-  word-break: break-word;
-  overflow-wrap: anywhere;
-  white-space: normal;
-}
-
-/* categoría debajo */
-.category {
-  margin-top: 6px;
-  color: #555;
-  font-size: 0.9rem;
-}
-
-/* area de edición: inputs que se encogen */
-.editing {
-  display: flex;
-  gap: 8px;
-  flex: 1;
-  min-width: 0;
-}
-
-.editInput {
-  flex: 1;
-  min-width: 0; /* <- permite que el input se reduzca en flex */
-  padding: 6px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.editSelect {
-  padding: 6px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-/* acciones a la derecha */
-.actions {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin-left: 8px;
-}
-
-.editBtn,
-.deleteBtn,
-.saveBtn,
-.cancelBtn {
-  border: none;
-  cursor: pointer;
-  padding: 6px 8px;
-  border-radius: 6px;
-}
-
-.editBtn {
-  background: #f59e0b;
-  color: white;
-}
-.deleteBtn {
-  background: #ef4444;
-  color: white;
-}
-.saveBtn {
-  background: #10b981;
-  color: white;
-}
-.cancelBtn {
-  background: #9ca3af;
-  color: white;
-}
+.cancelBtn { 
+  background: #9ca3af; 
+  color: white; 
+} 
 
 .item {
+  background: #1e293b;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  margin: 8px 0;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  background: #fff;
+  gap: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
 }
 
 .completed {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .completed .text {
   text-decoration: line-through;
+}
+
+.left {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* acciones (botones) abajo */
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
 }

@@ -1,0 +1,14 @@
+.header {
+  background: linear-gradient(90deg, #06b6d4, #8b5cf6); /* degradado futurista */
+  color: #f1f5f9;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.header span {
+  font-size: 1.9rem;
+  margin-right: 10px;
+}

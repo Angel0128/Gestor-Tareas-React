@@ -1,52 +1,108 @@
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   min-height: 100vh;
-  background-color: #ffffff;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 16px;
-  text-align: center;
+  background-color: #0f172a; /* fondo futurista */
+  color: #f1f5f9;
 }
 
-.card {
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  width: 400px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-h1 {
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.stats {
-  margin-top: 20px;
+.main {
+  flex: 1;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  gap: 24px;
+}
+
+/* Formulario arriba con estilo card */
+form {
+  background: #1e293b;
+  padding: 18px 24px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 800px;
+  justify-content: center;
+}
+
+form input,
+form select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+form button {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+form button:hover {
+  transform: scale(1.05);
+}
+
+/* Grid para las tareas */
+.taskSection {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.taskSection ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.taskSection li {
+  background: #1e293b;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.taskSection li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.7);
+}
+
+/* Estadísticas */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
   font-weight: bold;
-  /*color: #333;*/
   font-size: 1.1em;
 }
 
 .pending {
-  color: #ff0800;
+  color: #f87171; /* rojo suave */
 }
 
 .completed {
-  color: #00b000;
+  color: #34d399; /* verde futurista */
 }
 
+/* Barra de progreso */
 .progressBarContainer {
-  margin-top: 20px;
-  background: #e9ecef;
-  border-radius: 8px;
+  margin-top: 10px;
+  background: #334155;
+  border-radius: 10px;
   overflow: hidden;
-  height: 20px;
+  height: 22px;
+  width: 80%;
+  max-width: 700px;
 }
 
 .progressBar {
@@ -56,4 +112,18 @@ h1 {
   font-size: 0.9em;
   font-weight: bold;
   transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+.taskSection {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* grid de tarjetas */
+.taskSection ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
 }

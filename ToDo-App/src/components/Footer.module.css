@@ -1,0 +1,12 @@
+.footer {
+  background: #1e293b;
+  color: #94a3b8;
+  padding: 14px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 2px solid #334155;
+}
+
+.footer strong {
+  color: #06b6d4; /* tu nombre resalta con acento */
+}
